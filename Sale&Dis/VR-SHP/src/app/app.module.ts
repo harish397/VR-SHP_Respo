@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DislogCompComponent } from './Distributor/dislog-comp/dislog-comp.component';
+import { DislogCompComponent } from './Distributor/dislog/dislog-comp/dislog-comp.component'
 
 @NgModule({
   declarations: [
