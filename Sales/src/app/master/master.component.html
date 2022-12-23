@@ -1,0 +1,56 @@
+<mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="space-between center">
+   
+    <div fxLayout="row" fxShow="false" fxShow.gt-sm>
+      <!-- <button mat-button routerLink="/login" *ngIf="!isAuthenticated">
+        <mat-icon>power_settings_new</mat-icon>
+        Login
+      </button> -->
+      <!-- <button mat-button *ngIf="isAuthenticated" (click)="logout()">
+        <mat-icon>exit_to_app</mat-icon>
+        Logout
+      </button> -->
+      <!-- <button mat-button routerLink="/game">
+        <mat-icon>gamepad</mat-icon>
+        Play
+      </button> -->
+    </div>
+    <button mat-button [mat-menu-trigger-for]="menu" fxHide="false" fxHide.gt-sm>
+        
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>
+        <button mat-button routerLink="/" >{{x}}</button>
+        <!-- <button mat-button routerLink="/"><mat-icon>home</mat-icon></button> -->
+      </span>
+      <span>{{currentdate|date:'yyyy-MM-dd'}}</span>
+  </mat-toolbar>
+  <mat-menu x-position="before" #menu="matMenu">
+    <button mat-menu-item routerLink="/">
+        <mat-icon>perm_identity</mat-icon>
+     Admin
+    </button>
+    <button mat-menu-item routerLink="/a/b">
+        <mat-icon>add_shopping_cart</mat-icon>
+   Distributor
+    </button>
+    <button mat-menu-item routerLink="/">
+        <mat-icon>storage</mat-icon>
+        WareHouse
+    </button>
+    <button mat-menu-item routerLink="/login" *ngIf="!isAuthenticated">
+        <mat-icon> attach_money</mat-icon>
+
+        Authorization
+    </button>
+    <button mat-menu-item *ngIf="isAuthenticated" (click)="logout()">
+        <mat-icon>storage</mat-icon>
+      WareHouse
+    </button>
+    
+  </mat-menu>
+  <div class="A">
+    <h1>WELCOME TO VR-SHP</h1>
+    
+ <img src="../assets/Images/image.jpg" alt="image here">
+
+  </div>
