@@ -20,7 +20,7 @@ export class DistLoginComponent implements OnInit {
       if(this.userName=="VRSHP@123"&& this.Password=="VRSHP123")
       {
         console.log("Login works");
-        this.route.navigate(['a'])
+        this.route.navigate(['home'])
       }
     }
   }
