@@ -4,7 +4,7 @@ import { DistLoginComponent } from './dist-login/dist-login.component';
 
 const routes: Routes = [
   {
-    path:"b",component:DistLoginComponent
+    path:"",component:DistLoginComponent
   }
 ];
 

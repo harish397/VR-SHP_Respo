@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dist-login',
@@ -6,10 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dist-login.component.css']
 })
 export class DistLoginComponent implements OnInit {
-
-  constructor() { }
-
+  userName!:any;
+  Password!:any;
+  constructor(private route:Router) { }
+ 
   ngOnInit(): void {
   }
-
+  log()
+  {
+    if(this.userName!="" && this.Password!="")
+    {
+      if(this.userName=="VRSHP@123"&& this.Password=="VRSHP123")
+      {
+        console.log("Login works");
+        this.route.navigate(['a'])
+      }
+    }
+  }
 }
