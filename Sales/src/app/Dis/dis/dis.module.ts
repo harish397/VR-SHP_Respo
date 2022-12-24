@@ -6,6 +6,7 @@ import { DistLoginComponent } from './dist-login/dist-login.component';
 import { MyProfileComponent } from './my-profile/my-profile.component';
 import { PurchaseOrderComponent } from './purchase-order/purchase-order.component';
 import { StockComponent } from './stock/stock.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -18,7 +19,7 @@ import { StockComponent } from './stock/stock.component';
   ],
   imports: [
     CommonModule,
-    DisRoutingModule
+    DisRoutingModule,FormsModule
   ]
 })
 export class DisModule { }
