@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, Routes } from '@angular/router';
 
 @Component({
   selector: 'app-dist-login',
@@ -13,15 +13,15 @@ export class DistLoginComponent implements OnInit {
  
   ngOnInit(): void {
   }
+  
   log()
   {
-    if(this.userName!="" && this.Password!="")
-    {
-      if(this.userName=="VRSHP@123"&& this.Password=="VRSHP123")
+     if(this.userName=="VRSHP@123"&& this.Password=="VRSHP123")
       {
         console.log("Login works");
-        this.route.navigate(['home'])
+        this.route.navigate(["home"]);
       }
-    }
+       
+    
   }
 }

@@ -7,6 +7,7 @@ import { MyProfileComponent } from './my-profile/my-profile.component';
 import { PurchaseOrderComponent } from './purchase-order/purchase-order.component';
 import { StockComponent } from './stock/stock.component';
 import { HomeComponent } from './home/home.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -20,7 +21,7 @@ import { HomeComponent } from './home/home.component';
   ],
   imports: [
     CommonModule,
-    DisRoutingModule
+    DisRoutingModule,FormsModule
   ]
 })
 export class DisModule { }
