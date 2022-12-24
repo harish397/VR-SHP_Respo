@@ -7,7 +7,7 @@ const routes: Routes = [
     path:"",component:MasterComponent
   },
   {
-    path:"a",loadChildren:()=>import('./Dis/dis/dis.module').then(m=>m.DisModule)
+    path:"Distributor",loadChildren:()=>import('./Dis/dis/dis.module').then(m=>m.DisModule)
   }
 ];
 

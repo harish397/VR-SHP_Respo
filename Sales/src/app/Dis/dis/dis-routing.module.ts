@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     path:"",component:DistLoginComponent
 =======
     path:"b",component:DistLoginComponent
@@ -13,7 +14,11 @@ const routes: Routes = [
   {
     path:"",component:HomeComponent
 >>>>>>> Stashed changes
+=======
+    path:"Login",component:DistLoginComponent
+>>>>>>> Stashed changes
   }
+  
 ];
 
 @NgModule({
