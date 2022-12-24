@@ -8,6 +8,8 @@ import { PurchaseOrderComponent } from './purchase-order/purchase-order.componen
 import { StockComponent } from './stock/stock.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
+import { MaterialExampleModule } from 'src/Material.Module';
+import { ProductComponent } from './product/product.component';
 
 
 @NgModule({
@@ -17,11 +19,12 @@ import { FormsModule } from '@angular/forms';
     PurchaseOrderComponent,
    
     StockComponent,
-         HomeComponent
+         HomeComponent,
+         ProductComponent
   ],
   imports: [
     CommonModule,
-    DisRoutingModule,FormsModule
+    DisRoutingModule,FormsModule,MaterialExampleModule
   ]
 })
 export class DisModule { }
