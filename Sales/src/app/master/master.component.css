@@ -8,3 +8,7 @@ h1{
     font-weight: bold;
     color:black;   
 }
+.b img{
+    height: 100px;
+    width: 100px;
+}
