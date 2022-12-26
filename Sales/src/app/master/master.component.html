@@ -25,7 +25,7 @@
       <span>{{currentdate|date:'yyyy-MM-dd'}}</span>
   </mat-toolbar>
   <mat-menu x-position="before" #menu="matMenu">
-    <button mat-menu-item routerLink="/">
+    <button mat-menu-item routerLink="/Admin">
         <mat-icon>perm_identity</mat-icon>
      Admin
     </button>
@@ -33,11 +33,11 @@
         <mat-icon>add_shopping_cart</mat-icon>
    Distributor
     </button>
-    <button mat-menu-item routerLink="/">
+    <button mat-menu-item routerLink="/WareHouse">
         <mat-icon>storage</mat-icon>
         WareHouse
     </button>
-    <button mat-menu-item routerLink="/login" *ngIf="!isAuthenticated">
+    <button mat-menu-item routerLink="/Authorizer" *ngIf="!isAuthenticated">
         <mat-icon> attach_money</mat-icon>
 
         Authorization

@@ -14,6 +14,15 @@ const routes: Routes = [
   {
     path:"home",component:HomeComponent
   },
+  {
+    path:"Admin",loadChildren:()=>import('./Admin/admin/admin.module').then(m=>m.AdminModule)
+  },
+  {
+    path:"Authorizer",loadChildren:()=>import('./Authorizer/authorizer/authorizer.module').then(m=>m.AuthorizerModule)
+  },
+  {
+path:"WareHouse",loadChildren:()=>import('./WareHouse/ware-house/ware-house.module').then(m=>m.WareHouseModule)
+  }
 
 
 ];
