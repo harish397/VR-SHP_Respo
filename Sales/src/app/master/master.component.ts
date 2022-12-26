@@ -13,6 +13,13 @@ export class MasterComponent implements OnInit {
   public logout(): void {
     // todo
   }
+  standalone!: true;
+
+    selectedTeam = '';
+    onSelected(value:string): void {
+      this.selectedTeam = value;
+    }
+
   constructor() { }
 
   ngOnInit(): void {
