@@ -11,9 +11,7 @@ const routes: Routes = [
   {
     path:"Distributor",loadChildren:()=>import('./Dis/dis/dis.module').then(m=>m.DisModule)
   },
-  {
-    path:"home",component:HomeComponent
-  },
+
   {
     path:"Admin",loadChildren:()=>import('./Admin/admin/admin.module').then(m=>m.AdminModule)
   },
