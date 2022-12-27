@@ -15,14 +15,6 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
-//   pro()
-//   {
-//  let b= this.dialog.open(MyProfileComponent,{width:'30%' ,height:'80%'})
-//   }
-  // Edit(Sno:any)
-  // {
-  //   let b= this.dialog.open(MyProfileComponent,{width:'30%' ,height:'80%',data:Sno})
-  // }
 
 
 }
