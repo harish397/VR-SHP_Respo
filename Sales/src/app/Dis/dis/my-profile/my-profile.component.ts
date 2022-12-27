@@ -11,7 +11,7 @@ import { RegService } from 'src/app/reg.service';
 export class MyProfileComponent implements OnInit {
   CD=new Date();
   salesInfo!:any;
-  constructor(private da:RegService) { }
+  constructor(private da:RegService,@Inject(MAT_DIALOG_DATA) public data:any) { }
 
   ngOnInit(): void {
 
@@ -27,8 +27,13 @@ export class MyProfileComponent implements OnInit {
       }
     );
     this.salesInfo.patchvalue({
-      // UserName:this.data.UserName,
-      // PhoneNumber:this.data.
+      UserName:this.data.UserName,
+       PhoneNumber:this.data.PhoneNumber,
+       FirstName:this.data.FirstName,
+       TIN_No:this.data.TIN_No,
+       PAN_No:this.data.PAN_No,
+       Bank_Acc_No:this.data.Bank_Acc_No,
+       IFSC_Code:this.data.IFSC_Code
     })
       
     
