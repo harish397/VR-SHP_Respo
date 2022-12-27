@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { RegService } from 'src/app/reg.service';
 
 @Component({
@@ -10,7 +11,7 @@ import { RegService } from 'src/app/reg.service';
 export class MyProfileComponent implements OnInit {
   CD=new Date();
   salesInfo!:any;
-  constructor(private data:RegService) { }
+  constructor(private da:RegService) { }
 
   ngOnInit(): void {
 

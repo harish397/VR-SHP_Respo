@@ -10,14 +10,19 @@ import { MyProfileComponent } from '../my-profile/my-profile.component';
 })
 export class HomeComponent implements OnInit {
   f=new Date();
+  //columns:string[]=['Manage']
   constructor(private dialog:MatDialog) { }
 
   ngOnInit(): void {
   }
-  pro()
-  {
- let b= this.dialog.open(MyProfileComponent,{width:'30%' ,height:'80%'})
-  }
+//   pro()
+//   {
+//  let b= this.dialog.open(MyProfileComponent,{width:'30%' ,height:'80%'})
+//   }
+  // Edit(Sno:any)
+  // {
+  //   let b= this.dialog.open(MyProfileComponent,{width:'30%' ,height:'80%',data:Sno})
+  // }
 
 
 }
