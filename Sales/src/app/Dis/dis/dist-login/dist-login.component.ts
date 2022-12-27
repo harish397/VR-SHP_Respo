@@ -18,7 +18,7 @@ export class DistLoginComponent implements OnInit {
   
   log()
   {
-     if(this.userName=="VRSHP@123"&& this.Password=="VRSHP123")
+     if(this.userName=="101"&& this.Password=="VRSHP123")
       {
         console.log("Login works");
        this.route.navigate(["/Distributor/home"]);
