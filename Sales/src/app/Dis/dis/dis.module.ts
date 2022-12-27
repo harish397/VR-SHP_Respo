@@ -7,7 +7,7 @@ import { MyProfileComponent } from './my-profile/my-profile.component';
 import { PurchaseOrderComponent } from './purchase-order/purchase-order.component';
 import { StockComponent } from './stock/stock.component';
 import { HomeComponent } from './home/home.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialExampleModule } from 'src/Material.Module';
 import { ProductComponent } from './product/product.component';
 
@@ -24,7 +24,7 @@ import { ProductComponent } from './product/product.component';
   ],
   imports: [
     CommonModule,
-    DisRoutingModule,FormsModule,MaterialExampleModule
+    DisRoutingModule,FormsModule,MaterialExampleModule,ReactiveFormsModule
   ]
 })
 export class DisModule { }
