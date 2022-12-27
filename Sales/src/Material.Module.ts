@@ -91,7 +91,7 @@ import{MatBottomSheetModule} from '@angular/material/bottom-sheet'
     MatTreeModule,
     OverlayModule,
     PortalModule,
-    ScrollingModule,
+   // ScrollingModule,
   
   ]
 })
