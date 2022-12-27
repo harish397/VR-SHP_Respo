@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Router, Routes } from '@angular/router';
 
 @Component({
@@ -19,7 +20,8 @@ export class DistLoginComponent implements OnInit {
      if(this.userName=="VRSHP@123"&& this.Password=="VRSHP123")
       {
         console.log("Login works");
-        this.route.navigate(["/Distributor/home"]);
+       this.route.navigate(["/Distributor/home"]);
+
       }
        
     
