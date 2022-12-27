@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AdminLoginComponent implements OnInit {
   userName!:string;
   Password!:string;
+  currentDate=new Date();
   constructor() { }
 log(){
   

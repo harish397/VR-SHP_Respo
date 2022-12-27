@@ -9,6 +9,7 @@ export class AuthorizerLoginComponent implements OnInit {
 
   userName!:string;
   Password!:string;
+  currentDate=new Date();
   constructor() { }
 log(){
   

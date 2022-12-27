@@ -9,7 +9,7 @@ import { MyProfileComponent } from '../my-profile/my-profile.component';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
+  f=new Date();
   constructor(private dialog:MatDialog) { }
 
   ngOnInit(): void {

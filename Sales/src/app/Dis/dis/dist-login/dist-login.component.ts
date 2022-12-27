@@ -10,6 +10,7 @@ import { Router, Routes } from '@angular/router';
 export class DistLoginComponent implements OnInit {
   userName!:any;
   Password!:any;
+  currentDate=new Date();
   constructor(private route:Router) { }
  
   ngOnInit(): void {

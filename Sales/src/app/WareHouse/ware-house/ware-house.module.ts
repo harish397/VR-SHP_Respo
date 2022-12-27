@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { WareHouseRoutingModule } from './ware-house-routing.module';
 import { WareHouseLoginComponent } from './ware-house-login/ware-house-login.component';
 import { FormsModule } from '@angular/forms';
+import { MaterialExampleModule } from 'src/Material.Module';
 
 
 @NgModule({
@@ -12,7 +13,7 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule,
-    WareHouseRoutingModule,FormsModule
+    WareHouseRoutingModule,FormsModule,MaterialExampleModule
   ]
 })
 export class WareHouseModule { }

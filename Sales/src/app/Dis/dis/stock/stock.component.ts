@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./stock.component.css']
 })
 export class StockComponent implements OnInit {
-
+CD=new Date();
+f="Stocks";
   constructor() { }
 
   ngOnInit(): void {
