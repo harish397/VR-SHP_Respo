@@ -15,6 +15,6 @@ export class RegService {
 
   getData()
   {
-  return this.http.get('https://localhost:44349/api/Sales/getbyId/');
+  return this.http.get('https://localhost:44349/api/Sales/get');
   }
 }
