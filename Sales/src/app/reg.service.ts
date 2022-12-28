@@ -20,10 +20,6 @@ getData(){
 
   LogData(Username:string|any,Id:number|any)
   {
-   this.http.get('https://localhost:44344/api/VRSHP/get/'+Username+"/"+Id ).subscribe(e=>{this.DataInfo=e;
-  setTimeout(()=>{
-
-  },2000)
-  });
+  return this.http.get('https://localhost:44349/api/Sales/getbyId/');
   }
 }
