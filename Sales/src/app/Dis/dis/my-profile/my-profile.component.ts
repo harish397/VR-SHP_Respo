@@ -14,7 +14,7 @@ export class MyProfileComponent implements OnInit {
   constructor(private da:RegService,@Inject(MAT_DIALOG_DATA) public data:any) { }
 
   ngOnInit(): void {
-
+    
     this.salesInfo=new FormGroup(
       {
         UserName:new FormControl(''),
