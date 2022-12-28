@@ -11,10 +11,19 @@ export class RegService {
       'Content-Type': 'application/json'
     })
   }
-  constructor(private http:HttpClient) { }
+DataInfo!:any;
 
-  getData()
+  constructor(private http:HttpClient) { }
+getData(){
+  return this.http.get('https://localhost:44344/api/VRSHP/get/');
+}
+
+  LogData(Username:string|any,Id:number|any)
   {
-  return this.http.get('https://localhost:44349/api/Sales/getbyId/');
+   this.http.get('https://localhost:44344/api/VRSHP/get/'+Username+"/"+Id ).subscribe(e=>{this.DataInfo=e;
+  setTimeout(()=>{
+
+  },2000)
+  });
   }
 }
