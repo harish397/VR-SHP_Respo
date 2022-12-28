@@ -1,6 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatTableDataSource } from '@angular/material/table';
 import { RegService } from 'src/app/reg.service';
 
 @Component({
@@ -11,10 +12,26 @@ import { RegService } from 'src/app/reg.service';
 export class MyProfileComponent implements OnInit {
   CD=new Date();
   salesInfo!:any;
-  constructor(private da:RegService,@Inject(MAT_DIALOG_DATA) public data:any) { }
+  loginform!:any;
 
-  ngOnInit(): void {
+  columns:string[]=["UserName" ,"PhoneNumber","FirstName","TIN_No","PAN_No","Bank_Acc_No","IFSC_Code"];
+  dataSource=new MatTableDataSource;
+
+  constructor(private da:RegService) { }
+
+  
+
+  ngOnInit():void {
+    this.get();
+  }
+  get()
+  {
+
+   return this.da.getData().subscribe((x:any)=>{this.loginform=new MatTableDataSource(x)});
     
+  }
+
+    /*
     this.salesInfo=new FormGroup(
       {
         UserName:new FormControl(''),
@@ -35,9 +52,10 @@ export class MyProfileComponent implements OnInit {
        Bank_Acc_No:this.data.Bank_Acc_No,
        IFSC_Code:this.data.IFSC_Code
     })
+  }*/
       
     
   }
+  
 
 
-}

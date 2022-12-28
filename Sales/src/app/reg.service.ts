@@ -13,8 +13,8 @@ export class RegService {
   }
   constructor(private http:HttpClient) { }
 
-  getData(Id:any)
+  getData()
   {
-  this.http.get('https://localhost:44349/api/Sales/getbyId/' +Id,this.httpOption).subscribe();
+  return this.http.get('https://localhost:44349/api/Sales/getbyId/');
   }
 }
