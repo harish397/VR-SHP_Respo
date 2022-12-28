@@ -31,7 +31,7 @@ const routes: Routes = [
       path:"profiless",component:MyProfileComponent
     },
     {
-      path:"product",component:ProductComponent
+      path:"",component:ProductComponent
     }
   
   

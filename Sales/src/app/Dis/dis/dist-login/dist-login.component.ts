@@ -24,6 +24,10 @@ export class DistLoginComponent implements OnInit {
        this.route.navigate(["/Distributor/home"]);
 
       }
+      else{
+        alert("Enter Valid credentials")
+      }
+      
        
     
   }
