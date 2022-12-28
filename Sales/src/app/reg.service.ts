@@ -20,6 +20,6 @@ getData(){
 
   LogData(Username:string|any,Id:number|any)
   {
-  return this.http.get('https://localhost:44349/api/Sales/getbyId/');
+  return this.http.get('https://localhost:44349/api/Sales/getUP/'+Username+"/" +Id).subscribe(e=>{this.DataInfo=e;});
   }
 }

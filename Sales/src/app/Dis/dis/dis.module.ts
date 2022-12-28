@@ -24,7 +24,7 @@ import { ProductComponent } from './product/product.component';
   ],
   imports: [
     CommonModule,
-    DisRoutingModule,FormsModule,MaterialExampleModule,ReactiveFormsModule
+    DisRoutingModule,MaterialExampleModule,ReactiveFormsModule
   ]
 })
 export class DisModule { }

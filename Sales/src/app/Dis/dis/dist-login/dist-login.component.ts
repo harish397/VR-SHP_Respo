@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { Router, Routes } from '@angular/router';
 import { RegService } from 'src/app/reg.service';
@@ -11,6 +12,12 @@ import { RegService } from 'src/app/reg.service';
 export class DistLoginComponent implements OnInit {
   userName:any;
   Password:any;
+ 
+  loginform=new FormGroup({
+    userName:new FormControl(''),
+    Password:new FormControl(''),
+    d:new FormControl('')
+  })
   currentDate=new Date();
   constructor(private route:Router,private Ser:RegService) { }
  
@@ -19,28 +26,17 @@ export class DistLoginComponent implements OnInit {
   
   log()
   {
-    //  if(this.userName=="101"&& this.Password=="VRSHP123")
-    //   {
-    //     console.log("Login works");
-    //    this.route.navigate(["/Distributor/home"]);
+ 
+      this.Ser.LogData(this.loginform.value.userName,this.loginform.value.Password);
 
-    //   }
-
-
-      // else{
-      //   alert("Enter Valid credentials")
-      // }
-      
-      this.Ser.LogData(this.userName.value,this.Password.value);
-
-
+      console.log(this.loginform.value.d)
       console.log(this.Ser.DataInfo)
-       
-      setTimeout(()=>{
-        if(this.Ser.DataInfo=="exists"){
-          this.route.navigate(['home'])
-        }
-      })
+      
+       if(this.Ser.DataInfo=="Exists"){
+        this.route.navigate(['home'])
+  }
+    
+  
     
   }
 }
