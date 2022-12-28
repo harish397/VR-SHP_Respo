@@ -1,28 +1,24 @@
 
 <mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="space-between center">
    <h1>distributor works</h1>
-   <span>{{f}}</span>
+   <span>{{f|date:'yyyy-mm-dd'}}</span>
     <div fxLayout="row" fxShow="false" fxShow.gt-sm>
     </div>
 
+    <div id="wrapper">
+    <a class="nav-link" routerLink="/Distributor/profile" ><img src="../assets/Images/profile.png" class="hover"><p class="text">Profile</p></a>
+    </div>
+    <div id="wrapper">
+      <a class="nav-link" routerLink="/Distributor" ><img src="../assets/Images/orders.jpg"  class="hover"><p class="text">Products</p></a>
+    </div>
+    <div id="wrapper">
+      <a class="nav-link" routerLink="/Distributor/purchase" ><img src="../assets/Images/purchase.jpg"  class="hover"><p class="text">Purchase</p></a>
+    </div>
+    <div id="wrapper">
+      <a class="nav-link" routerLink="/Distributor/stock" ><img src="../assets/Images/stock.jpg"  class="hover"><p class="text">Stocks</p></a>
+    </div>
   </mat-toolbar>
 
-  <div class="A">
-    <!-- <button><mat-icon>perm_identity</mat-icon>Profile</button> -->
-
-
-
-    <a class="nav-link" routerLink="/Distributor/profile" ><img src="../assets/Images/profile.png" (click)="log($event)">Profile</a>
-    <a class="nav-link" routerLink="/Distributor" ><img src="../assets/Images/orders.jpg">Product</a>
-    <a class="nav-link" routerLink="/Distributor/purchase" ><img src="../assets/Images/purchase.jpg">Purchase</a>
-    <a class="nav-link" routerLink="/Distributor/stock" ><img src="../assets/Images/stock.jpg">Stock</a>
-
-
-    <button (click)="onlog($event)">DIALOG</button>
-
-
-
-  </div>
   
  
  

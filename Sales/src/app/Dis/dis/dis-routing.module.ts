@@ -27,9 +27,7 @@ const routes: Routes = [
     {
       path:"stock",component:StockComponent
     },
-    {
-      path:"profiless",component:MyProfileComponent
-    },
+
     {
       path:"",component:ProductComponent
     }
