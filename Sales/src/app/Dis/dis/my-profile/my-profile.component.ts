@@ -54,7 +54,9 @@ export class MyProfileComponent implements OnInit {
     })
   }*/
       
-    
+    harisg(){
+      
+    }
   }
   
 
