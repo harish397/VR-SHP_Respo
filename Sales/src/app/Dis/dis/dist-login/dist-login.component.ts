@@ -33,7 +33,7 @@ export class DistLoginComponent implements OnInit {
       console.log(this.Ser.DataInfo)
       
        if(this.Ser.DataInfo=="Exists"){
-        this.route.navigate(['home'])
+        this.route.navigate(['product'])
   }
     
   
