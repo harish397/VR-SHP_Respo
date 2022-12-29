@@ -23,15 +23,7 @@ export class MyProfileComponent implements OnInit {
 
   ngOnInit():void {
     this.get();
-  }
-  get()
-  {
-
-   return this.da.getData().subscribe((x:any)=>{this.loginform=new MatTableDataSource(x)});
     
-  }
-
-    /*
     this.salesInfo=new FormGroup(
       {
         UserName:new FormControl(''),
@@ -43,7 +35,7 @@ export class MyProfileComponent implements OnInit {
         IFSC_Code:new FormControl('')
       }
     );
-    this.salesInfo.patchvalue({
+   /* this.salesInfo.patchvalue({
       UserName:this.data.UserName,
        PhoneNumber:this.data.PhoneNumber,
        FirstName:this.data.FirstName,
@@ -51,12 +43,18 @@ export class MyProfileComponent implements OnInit {
        PAN_No:this.data.PAN_No,
        Bank_Acc_No:this.data.Bank_Acc_No,
        IFSC_Code:this.data.IFSC_Code
-    })
-  }*/
-      
-    harisg(){
-      
-    }
+    })}*/
+  
+  }
+  get()
+  {
+
+   return this.da.getData().subscribe((x:any)=>{this.loginform=new MatTableDataSource(x)});
+    
+  }
+
+    
+  
   }
   
 
