@@ -12,18 +12,28 @@ import { RegService } from 'src/app/reg.service';
 export class MyProfileComponent implements OnInit {
   CD=new Date();
   salesInfo!:any;
+ 
+ 
   loginform!:any;
 
   columns:string[]=["UserName" ,"PhoneNumber","FirstName","TIN_No","PAN_No","Bank_Acc_No","IFSC_Code"];
   dataSource=new MatTableDataSource;
 
-  constructor(private da:RegService) { }
+  constructor(private da:RegService,@Inject(MAT_DIALOG_DATA) public data:any) { }
 
-  
+
 
   ngOnInit():void {
     this.get();
+  }
+  get()
+  {
+
+   return this.da.getData().subscribe((x:any)=>{this.loginform=new MatTableDataSource(x)});
     
+  }
+
+    /*
     this.salesInfo=new FormGroup(
       {
         UserName:new FormControl(''),
@@ -43,17 +53,9 @@ export class MyProfileComponent implements OnInit {
        PAN_No:this.data.PAN_No,
        Bank_Acc_No:this.data.Bank_Acc_No,
        IFSC_Code:this.data.IFSC_Code
-    })}*/
-  
-  }
-  get()
-  {
-
-   return this.da.getData().subscribe((x:any)=>{this.loginform=new MatTableDataSource(x)});
-    
-  }
-
-    
+    })
+  }*/
+      
   
   }
   
