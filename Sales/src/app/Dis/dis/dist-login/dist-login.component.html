@@ -20,14 +20,20 @@
             </div>
             <div class="form-field d-flex align-items-center">
                 <span class="fas fa-key"></span>
-                <input type="password" name="password" id="pwd" placeholder="Password" formControlName="Password">
+                <input type="password" name="password" id="Id" placeholder="Password" formControlName="Id">
             </div>
     
-            <button class="btn mt-3" (click)="log()">Login</button>
+            <button type="button"  class="btn mt-3" (click)="login()">Login</button>
         </form>
         <div class="text-center fs-6">
              <a href="#">Forget password?</a>
         </div>
     </div>
 </form>
+<!-- <form [formGroup]="loginform">
+<div class="a">
+    <label for="userName">Username</label>
+    <input type="text" placeholder="userName" 
+</div>
+</form> -->
 

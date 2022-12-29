@@ -10,33 +10,39 @@ import { RegService } from 'src/app/reg.service';
   styleUrls: ['./dist-login.component.css']
 })
 export class DistLoginComponent implements OnInit {
-  userName:any;
-  Password:any;
+ 
  
   loginform=new FormGroup({
     userName:new FormControl(''),
-    Password:new FormControl(''),
+    Id:new FormControl(''),
     d:new FormControl('')
   })
   currentDate=new Date();
   constructor(private route:Router,private Ser:RegService) { }
- 
+  isUser : any;
+
   ngOnInit(): void {
   }
   
-  log()
+  login()
   {
- 
-      this.Ser.LogData(this.loginform.value.userName,this.loginform.value.Password);
-
-      console.log(this.loginform.value.d)
-      console.log(this.Ser.DataInfo)
+    this.Ser.LogData(this.loginform.value.userName,this.loginform.value.Id).subscribe((s:any)=>{
+      this.isUser = s;
+      console.log(this.isUser)
+     
+        if(this.isUser==="Exists")
+        {
+          this.route.navigate(['/Distributor/home'])
+        }
+        
+        else{
+          alert("enter crct details");
+        }
+      })
       
-       if(this.Ser.DataInfo=="Exists"){
-        this.route.navigate(['product'])
   }
-    
   
     
   }
-}
+
+

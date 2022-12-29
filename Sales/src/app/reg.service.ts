@@ -15,11 +15,13 @@ DataInfo!:any;
 
   constructor(private http:HttpClient) { }
 getData(){
-  return this.http.get('https://localhost:44344/api/VRSHP/get/');
+  return this.http.get('https://localhost:44349/api/Sales/get/');
 }
 
-  LogData(Username:string|any,Id:number|any)
+  LogData(Username:any,Id:any)
   {
-  return this.http.get('https://localhost:44349/api/Sales/getUP/'+Username+"/" +Id).subscribe(e=>{this.DataInfo=e;});
+    console.log(Username)
+  return this.http.get(`https://localhost:44349/api/Sales/getUP/${Username}/${Id}`);
+
   }
 }

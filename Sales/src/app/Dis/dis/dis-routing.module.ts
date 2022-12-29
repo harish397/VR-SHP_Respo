@@ -11,7 +11,7 @@ const routes: Routes = [
 
   {
 
-    path:"Login",component:DistLoginComponent
+    path:"",component:DistLoginComponent
 
   },
   {

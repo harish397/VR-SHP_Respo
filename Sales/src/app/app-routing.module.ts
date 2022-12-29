@@ -20,7 +20,10 @@ const routes: Routes = [
   },
   {
 path:"WareHouse",loadChildren:()=>import('./WareHouse/ware-house/ware-house.module').then(m=>m.WareHouseModule)
-  }
+  },
+  // {
+  //   path:"home",component:HomeComponent
+  // }
 
 
 ];
