@@ -17,6 +17,11 @@ DataInfo!:any;
 getData(){
   return this.http.get('https://localhost:44349/api/Sales/get/');
 }
+getByID(ID:any)
+  {
+    return this.http.get(`https://localhost:44349/api/Sales/getbyId/${ID}`);
+  }
+
 
   LogData(Username:any,Id:any)
   {

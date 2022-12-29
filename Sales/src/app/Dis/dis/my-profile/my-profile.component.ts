@@ -14,18 +14,17 @@ export class MyProfileComponent implements OnInit {
   salesInfo!:any;
   loginform!:any;
 
-  columns:string[]=["UserName" ,"PhoneNumber","FirstName","TIN_No","PAN_No","Bank_Acc_No","IFSC_Code"];
-  dataSource=new MatTableDataSource;
-
-  constructor(private da:RegService) { }
+  constructor(private da:RegService,@Inject(MAT_DIALOG_DATA) public data:any) { }
 
   
 
   ngOnInit():void {
-    this.get();
+   // this.get();
+  this.getby();
     
     this.salesInfo=new FormGroup(
       {
+        ID:new FormControl(''),
         UserName:new FormControl(''),
         PhoneNumber:new FormControl(''),
         FirstName:new FormControl(''),
@@ -35,7 +34,8 @@ export class MyProfileComponent implements OnInit {
         IFSC_Code:new FormControl('')
       }
     );
-   /* this.salesInfo.patchvalue({
+    this.salesInfo.patchvalue({
+      ID:this.data.ID,
       UserName:this.data.UserName,
        PhoneNumber:this.data.PhoneNumber,
        FirstName:this.data.FirstName,
@@ -43,19 +43,27 @@ export class MyProfileComponent implements OnInit {
        PAN_No:this.data.PAN_No,
        Bank_Acc_No:this.data.Bank_Acc_No,
        IFSC_Code:this.data.IFSC_Code
-    })}*/
-  
+    })
   }
+  getby()
+  {
+  this.da.getByID(this.salesInfo.ID).subscribe((y:any)=>{this.salesInfo=y})
+  }
+  
+ /*
   get()
   {
 
    return this.da.getData().subscribe((x:any)=>{this.loginform=new MatTableDataSource(x)});
     
-  }
-
+  }*/
+  
+}
     
   
-  }
   
+  
+
+
 
 
