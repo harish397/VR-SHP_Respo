@@ -1,3 +1,37 @@
 
 <app-home></app-home>
-<p>product works</p>
+
+<div class="A">
+
+        
+            <dl>
+                <dt>TITLE</dt>
+                <dd>{{product.title}}</dd>
+              
+                <dt>Category</dt>
+                <dd>{{product.category}}</dd>
+            
+                <button type="button" class="btn btn-primary" (click)="toggle()" style="margin-left: 20px;">description</button>
+                <div *ngIf="condition; then thenBlock"></div>
+                <ng-template #some>
+                    <img [src]="product.image" width="200" height="200">
+                </ng-template>
+                <ng-template #more>
+                    <h5>{{product.description}}</h5>
+            
+                </ng-template>
+                <dt>rating</dt>
+                <dd>{{product.rating.rate}}</dd>
+                <dd>No. of products sold : {{product.rating.count}}</dd>
+            </dl>
+           
+    
+        <div class="B">
+            <button type="button" class="btn btn-primary" (click)="previous()" style="margin:0 83% 0 8px;">previous</button> 
+            <button type="button" class="btn btn-primary" (click)="next()">next</button>
+        </div>
+        
+    
+    
+    
+</div>

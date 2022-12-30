@@ -10,9 +10,12 @@ import { MyProfileComponent } from '../my-profile/my-profile.component';
 })
 export class HomeComponent implements OnInit {
   f=new Date();
+  ID!:any;
+
   constructor(private dialog:MatDialog) { }
   on(ID:any)
   {
+
     this.dialog.open(MyProfileComponent,{height:'80%',width:'40%' , data:ID})
   }
 

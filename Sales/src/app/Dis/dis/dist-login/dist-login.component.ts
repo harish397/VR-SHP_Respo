@@ -11,7 +11,7 @@ import { RegService } from 'src/app/reg.service';
 })
 export class DistLoginComponent implements OnInit {
  
- loginform!:any;
+ loginform!:any
  /* loginform=new FormGroup({
     UserName:new FormControl(),
     ID:new FormControl(),
