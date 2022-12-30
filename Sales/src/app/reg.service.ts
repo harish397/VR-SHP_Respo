@@ -23,10 +23,10 @@ getByID(ID:any)
   }
 
 
-  LogData(Username:any,Id:any)
+  LogData(UserName:any,ID:any)
   {
-    console.log(Username)
-  return this.http.get(`https://localhost:44349/api/Sales/getUP/${Username}/${Id}`);
+    console.log(`https://localhost:44349/api/Sales/getUP/{UserName}/{Id}`)
+    return this.http.get(`https://localhost:44349/api/Sales/getUP/${UserName}/${ID}`);
 
   }
 }

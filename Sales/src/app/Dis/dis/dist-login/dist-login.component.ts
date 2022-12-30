@@ -11,26 +11,31 @@ import { RegService } from 'src/app/reg.service';
 })
 export class DistLoginComponent implements OnInit {
  
- 
-  loginform=new FormGroup({
-    userName:new FormControl(''),
-    Id:new FormControl(''),
-    d:new FormControl('')
-  })
+ loginform!:any;
+ /* loginform=new FormGroup({
+    UserName:new FormControl(),
+    ID:new FormControl(),
+    d:new FormControl()
+  })*/
   currentDate=new Date();
   constructor(private route:Router,private Ser:RegService) { }
   isUser : any;
 
   ngOnInit(): void {
+    this.loginform=new FormGroup({
+      UserName:new FormControl(),
+      ID:new FormControl(),
+      d:new FormControl()
+    })
   }
   
   login()
   {
-    this.Ser.LogData(this.loginform.value.userName,this.loginform.value.Id).subscribe((s:any)=>{
+   this.Ser.LogData(this.loginform.value.UserName,this.loginform.value.ID).subscribe((s:any)=>{
       this.isUser = s;
       console.log(this.isUser)
      
-        if(this.isUser==="Exists")
+        if(this.isUser)
         {
           this.route.navigate(['/Distributor/home'])
         }
