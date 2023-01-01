@@ -11,6 +11,9 @@ const routes: Routes = [
   {
     path:"Distributor",loadChildren:()=>import('./Dis/dis/dis.module').then(m=>m.DisModule)
   },
+  {
+    path:"AdminLog",loadChildren:()=>import('./Admin/admin/admin.module').then(m=>m.AdminModule)
+  },
 
   {
     path:"Admin",loadChildren:()=>import('./Admin/admin/admin.module').then(m=>m.AdminModule)

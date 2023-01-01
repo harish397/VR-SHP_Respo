@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { AdminRoutingModule } from './admin-routing.module';
 
 import { AdminLoginComponent } from './admin-login/admin-login.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialExampleModule } from 'src/Material.Module';
 
 
@@ -15,8 +15,8 @@ import { MaterialExampleModule } from 'src/Material.Module';
   ],
   imports: [
     CommonModule,
-    AdminRoutingModule,
-    FormsModule,MaterialExampleModule
+    AdminRoutingModule
+   ,MaterialExampleModule,ReactiveFormsModule
   ]
 })
 export class AdminModule { }

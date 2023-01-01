@@ -29,4 +29,8 @@ getByID(ID:any)
     return this.http.get(`https://localhost:44349/api/Sales/getUP/${UserName}/${ID}`);
 
   }
+  AdminLD(UserName:any,password:any)
+  {
+    return this.http.get(`https://localhost:44349/api/Sales/getAUP/${UserName}/${password}`)
+  }
 }
