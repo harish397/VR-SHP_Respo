@@ -21,6 +21,7 @@ export class ProfileComponent implements OnInit {
   Bank_Acc_No!:any;
   IFSC_Code!:any;
   salesInfo!:any;
+  
   constructor(private da:RegService,@Inject(MAT_DIALOG_DATA) public data:any) { }
 
   

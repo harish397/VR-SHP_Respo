@@ -5,36 +5,32 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class RegService {
-  isUser(isUser: any) {
-    throw new Error('Method not implemented.');
-  }
-
+  
   httpOption={
     headers:new HttpHeaders({
       'Content-Type': 'application/json'
     })
   }
-DataInfo!:any;
-
+isUser:any;
   constructor(private http:HttpClient) { }
 getData(){
   return this.http.get('https://localhost:44349/api/Sales/get/');
 }
 getByID(ID:any)
   {
-    return this.http.get(`https://localhost:44392/api/Project1/get/${ID}`,this.httpOption);
+    return this.http.get(`https://localhost:44349/api/Sales/getbyId/${ID}`,this.httpOption);
   }
 
 
   LogData(UserName:any,ID:any)
   {
-    return this.http.get(`https://localhost:44392/api/Project1/login/${UserName}/${ID}`).subscribe((s:any) =>{
-      this.isUser = s;
-    });
+    console.log(`https://localhost:44349/api/Sales/getUP/{UserName}/{Id}`)
+    return this.http.get(`https://localhost:44349/api/Sales/getUP/${UserName}/${ID}`).subscribe((s:any)=>{
+      this.isUser = s;})
 
   }
   AdminLD(UserName:any,password:any)
   {
-    return this.http.get(`https://localhost:44349/api/Sales/getAUP/${UserName}/${password}`);
+    return this.http.get(`https://localhost:44349/api/Sales/getAUP/${UserName}/${password}`)
   }
 }
