@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
   on(Id:any)
   {
 
-    this.dialog.open(ProfileComponent,{height:'100%',width:'43%' , data:Id})
+    this.dialog.open(ProfileComponent,{height:'80%',width:'40%' , data:Id})
   }
 
   ngOnInit(): void {
