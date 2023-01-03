@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ProfileComponent } from 'src/app/profiledis/profile/profile.component';
 import { RegService } from 'src/app/reg.service';
-import { DistLoginComponent } from '../dist-login/dist-login.component';
-import { MyProfileComponent } from '../my-profile/my-profile.component';
 
 @Component({
   selector: 'app-home',

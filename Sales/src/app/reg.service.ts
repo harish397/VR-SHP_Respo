@@ -5,41 +5,33 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class RegService {
-  
+
   httpOption={
     headers:new HttpHeaders({
       'Content-Type': 'application/json'
     })
   }
+DataInfo!:any;
 isUser:any;
+
   constructor(private http:HttpClient) { }
 getData(){
-  return this.http.get('https://localhost:44349/api/Sales/get/');
+  return this.http.get('https://localhost:44336/api/Group/get/{id}');
 }
 getByID(ID:any)
   {
-<<<<<<< Updated upstream
-    return this.http.get(`https://localhost:44349/api/Sales/getbyId/${ID}`,this.httpOption);
-=======
-    return this.http.get(`https://localhost:44392/api/Project1/get/${ID}`);
->>>>>>> Stashed changes
+    return this.http.get(`https://localhost:44336/api/Group/get/${ID}`);
   }
 
 
   LogData(UserName:any,ID:any)
   {
-<<<<<<< Updated upstream
-    console.log(`https://localhost:44349/api/Sales/getUP/{UserName}/{Id}`)
-    return this.http.get(`https://localhost:44349/api/Sales/getUP/${UserName}/${ID}`).subscribe((s:any)=>{
-      this.isUser = s;})
-=======
-    console.log(`https://localhost:44392/api/Project1/login/{UserName}/{Id}`)
-    return this.http.get(`https://localhost:44392/api/Project1/login/${UserName}/${ID}`);
->>>>>>> Stashed changes
+    console.log(`https://localhost:44336/api/Group/set/{Username}/{ID}`)
+    return this.http.get(`https://localhost:44336/api/Group/set/${UserName}/${ID}`);
 
   }
   AdminLD(UserName:any,password:any)
   {
-    return this.http.get(`https://localhost:44349/api/Sales/getAUP/${UserName}/${password}`);
+    return this.http.get(`https://localhost:44336/api/Sales/getAUP/${UserName}/${password}`)
   }
 }
