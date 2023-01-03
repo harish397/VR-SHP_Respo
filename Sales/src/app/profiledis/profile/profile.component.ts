@@ -3,15 +3,16 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { RegService } from 'src/app/reg.service';
 
 @Component({
-  selector: 'app-my-profile',
-  templateUrl: './my-profile.component.html',
-  styleUrls: ['./my-profile.component.css']
+  selector: 'app-profile',
+  templateUrl: './profile.component.html',
+  styleUrls: ['./profile.component.css']
 })
-export class MyProfileComponent implements OnInit {
+export class ProfileComponent implements OnInit {
+
   CD=new Date();
  
   
-  ID:number=101;
+  ID:any;
   UserName!:any;
   PhoneNumber!:any;
   FirstName!:any;
@@ -53,7 +54,7 @@ export class MyProfileComponent implements OnInit {
   }
   getby()
   {
-  return  this.da.getByID(this.ID).subscribe((y:any)=>
+  return  this.da.getByID(this.da.isUser).subscribe((y:any)=>
   {this.salesInfo=y; 
     
   this.ID=this.salesInfo[0].ID;
@@ -78,11 +79,5 @@ export class MyProfileComponent implements OnInit {
   }*/
   
 }
-    
-  
-  
-  
-
-
-
+ 
 

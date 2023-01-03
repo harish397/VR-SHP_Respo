@@ -24,6 +24,9 @@ const routes: Routes = [
   {
 path:"WareHouse",loadChildren:()=>import('./WareHouse/ware-house/ware-house.module').then(m=>m.WareHouseModule)
   },
+  {
+    path:"Shiva",loadChildren:()=>import ('./profiledis/profiledis.module').then(m=>m.ProfiledisModule)
+  },
   // {
   //   path:"home",component:HomeComponent
   // }

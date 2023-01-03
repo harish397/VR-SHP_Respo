@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-ware-house-login',
@@ -9,9 +10,9 @@ export class WareHouseLoginComponent implements OnInit {
   userName!:string;
   Password!:string;
   currentDate=new Date();
-  constructor() { }
+  constructor(private r:Router) { }
 log(){
-  
+  this.r.navigate(['/WareHouse/WareHome'])
 }
   ngOnInit(): void {
   }

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { ProfileComponent } from 'src/app/profiledis/profile/profile.component';
+import { RegService } from 'src/app/reg.service';
 import { DistLoginComponent } from '../dist-login/dist-login.component';
 import { MyProfileComponent } from '../my-profile/my-profile.component';
 
@@ -10,13 +12,14 @@ import { MyProfileComponent } from '../my-profile/my-profile.component';
 })
 export class HomeComponent implements OnInit {
   f=new Date();
-  ID!:any;
+  
 
-  constructor(private dialog:MatDialog) { }
-  on(ID:any)
+  constructor(private dialog:MatDialog,private ser:RegService) { }
+  Id=this.ser.isUser;
+  on(Id:any)
   {
 
-    this.dialog.open(MyProfileComponent,{height:'80%',width:'40%' , data:ID})
+    this.dialog.open(ProfileComponent,{height:'80%',width:'40%' , data:Id})
   }
 
   ngOnInit(): void {

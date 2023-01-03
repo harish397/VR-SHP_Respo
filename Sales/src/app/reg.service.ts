@@ -5,28 +5,28 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class RegService {
-
+  
   httpOption={
     headers:new HttpHeaders({
       'Content-Type': 'application/json'
     })
   }
-DataInfo!:any;
-
+isUser:any;
   constructor(private http:HttpClient) { }
 getData(){
   return this.http.get('https://localhost:44349/api/Sales/get/');
 }
 getByID(ID:any)
   {
-    return this.http.get(`https://localhost:44349/api/Sales/getbyId/${ID}`);
+    return this.http.get(`https://localhost:44349/api/Sales/getbyId/${ID}`,this.httpOption);
   }
 
 
   LogData(UserName:any,ID:any)
   {
     console.log(`https://localhost:44349/api/Sales/getUP/{UserName}/{Id}`)
-    return this.http.get(`https://localhost:44349/api/Sales/getUP/${UserName}/${ID}`);
+    return this.http.get(`https://localhost:44349/api/Sales/getUP/${UserName}/${ID}`).subscribe((s:any)=>{
+      this.isUser = s;})
 
   }
   AdminLD(UserName:any,password:any)
