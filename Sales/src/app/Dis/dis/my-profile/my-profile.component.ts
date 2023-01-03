@@ -16,9 +16,9 @@ export class MyProfileComponent implements OnInit {
 
   constructor(private da:RegService,@Inject(MAT_DIALOG_DATA) public data:any) { }
 
-  
+  ID:any=localStorage.getItem('IsUser')
 
-  ngOnInit():void {
+  ngOnInit() {
    // this.get();
   this.getby();
     
@@ -34,8 +34,8 @@ export class MyProfileComponent implements OnInit {
         IFSC_Code:new FormControl('')
       }
     );
-    this.salesInfo.patchvalue({
-      ID:this.data.ID,
+    this.salesInfo.patchValue({
+      ID:this.data[0].ID,
       UserName:this.data.UserName,
        PhoneNumber:this.data.PhoneNumber,
        FirstName:this.data.FirstName,
@@ -45,9 +45,9 @@ export class MyProfileComponent implements OnInit {
        IFSC_Code:this.data.IFSC_Code
     })
   }
-  getby()
+  getby() 
   {
-  this.da.getByID(this.salesInfo.ID).subscribe((y:any)=>{this.salesInfo=y})
+  return this.da.getByID(this.salesInfo.ID).subscribe((y:any)=>{this.salesInfo=y;})
   }
   
  /*

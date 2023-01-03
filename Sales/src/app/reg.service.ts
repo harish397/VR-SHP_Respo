@@ -15,22 +15,22 @@ DataInfo!:any;
 
   constructor(private http:HttpClient) { }
 getData(){
-  return this.http.get('https://localhost:44349/api/Sales/get/');
+  return this.http.get('https://localhost:44344/api/VRSHP/get');
 }
 getByID(ID:any)
   {
-    return this.http.get(`https://localhost:44349/api/Sales/getbyId/${ID}`);
+    return this.http.get(`https://localhost:44344/api/VRSHP/get/${ID}`);
   }
 
 
   LogData(UserName:any,ID:any)
   {
-    console.log(`https://localhost:44349/api/Sales/getUP/{UserName}/{Id}`)
-    return this.http.get(`https://localhost:44349/api/Sales/getUP/${UserName}/${ID}`);
+   
+    return this.http.get(`https://localhost:44344/api/VRSHP/get/${UserName}/${ID}`);
 
   }
   AdminLD(UserName:any,password:any)
   {
-    return this.http.get(`https://localhost:44349/api/Sales/getAUP/${UserName}/${password}`)
+    return this.http.get(`https://localhost:44344/api/VRSHP/get/${UserName}/${password}`)
   }
 }
