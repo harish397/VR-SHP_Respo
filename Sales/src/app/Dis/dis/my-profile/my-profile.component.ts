@@ -1,5 +1,11 @@
 import { Component, Inject, OnInit } from '@angular/core';
+<<<<<<< Updated upstream
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+=======
+import { FormControl, FormGroup } from '@angular/forms';
+import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatTableDataSource } from '@angular/material/table';
+>>>>>>> Stashed changes
 import { RegService } from 'src/app/reg.service';
 
 @Component({
@@ -20,7 +26,13 @@ export class MyProfileComponent implements OnInit {
   Bank_Acc_No!:any;
   IFSC_Code!:any;
   salesInfo!:any;
+<<<<<<< Updated upstream
   constructor(private da:RegService,@Inject(MAT_DIALOG_DATA) public data:any) { }
+=======
+  loginform!:any;
+
+  constructor(private da:RegService,@Inject(MAT_DIALOG_DATA) public data:any,private v:MatDialog) { }
+>>>>>>> Stashed changes
 
   
 
@@ -67,6 +79,9 @@ export class MyProfileComponent implements OnInit {
 
   
   })
+  }
+  x(){
+    this.v.closeAll();
   }
   
  /*
