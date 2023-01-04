@@ -15,7 +15,7 @@ const routes: Routes = [
 
   },
   {
-    path:"siraj",component:ProduuctComponent
+    path:"",component:ProduuctComponent
   },
   {
     path:"home",component:HomeComponent
@@ -30,7 +30,7 @@ const routes: Routes = [
     },
 
     {
-      path:"",component:ProductComponent
+      path:"get",component:ProductComponent
     }
   
   

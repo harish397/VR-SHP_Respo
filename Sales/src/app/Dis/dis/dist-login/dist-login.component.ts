@@ -28,9 +28,9 @@ export class DistLoginComponent implements OnInit {
   login()
   {
    this.Ser.LogData(this.loginform.value.UserName,this.loginform.value.ID)
-   {
-    console.log(this.Ser.isUser)
-     
+   setTimeout(()=>{
+
+
     if(this.Ser.isUser)
     {
       this.route.navigate(['/Distributor/home'])
@@ -40,7 +40,9 @@ export class DistLoginComponent implements OnInit {
     {
       alert("enter crct details");
     }
-  }
+
+   },500)
+   
    }
       
       

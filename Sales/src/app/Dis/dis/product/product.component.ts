@@ -1,4 +1,5 @@
-import { Component, OnInit,TemplateRef,ViewChild } from '@angular/core';
+import { Component, OnInit,TemplateRef,ViewChild,Inject } from '@angular/core';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { RegService } from 'src/app/reg.service';
 
 @Component({
@@ -9,40 +10,47 @@ import { RegService } from 'src/app/reg.service';
 export class ProductComponent implements OnInit {
 CD=new Date();
 item:any;
-imageID=1;
-condition=true
+condition=true;
+
+
 thenBlock:TemplateRef<any>|null=null;
 
-  constructor(private ser:RegService) { }
+  constructor(private ser:RegService,@Inject(MAT_DIALOG_DATA) public data:any) { 
+   
+  }
  
 @ViewChild('more',{static:true}) firstBlock:TemplateRef<any>|null=null;
 @ViewChild('some',{static:true}) secondBlock:TemplateRef<any>|null=null;
   ngOnInit(){
-    this.sk(this.imageID);
+    this.sk(this.data.imageID);
 
 
 
   }
+ 
+
   toggle()
   {
-    this.thenBlock=(this.thenBlock==this.firstBlock)?this.secondBlock:this.firstBlock
+   
+    this.thenBlock=(this.thenBlock==this.firstBlock)?this.secondBlock:this.firstBlock;
+    
   }
   sk(imageID:any)
   {
-    var shiva=this.ser.getImgbyId(this.imageID).subscribe((x)=>{this.item=x; })
+    var shiva=this.ser.getImgbyId(this.data.imageID).subscribe((x)=>{this.item=x; })
     console.log(shiva);
     return shiva;
   }
   previous(){
    
 
-    this.imageID--
-    this.sk(this.imageID);
+    this.data.imageID--
+    this.sk(this.data.imageID);
   
   }
   next(){
-    this.imageID++
-    this.sk(this.imageID);
+    this.data.imageID++
+    this.sk(this.data.imageID);
    
   }
   

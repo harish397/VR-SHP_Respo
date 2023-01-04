@@ -1,5 +1,4 @@
 
-<app-home></app-home>
 
 <div class="A">
 
@@ -10,7 +9,8 @@
               
                 <dt>Category</dt>
                 <dd>{{item.productFamily}}</dd>
-                
+                <dt>Product</dt>
+                <dd>{{item.product}}</dd>
                 <dt>Preview</dt>
                 <dd><img src="data:image/png;base64,{{item.productImage1}}" style="height: 200px; width: 250px; margin-left: 30%;"></dd>
 
@@ -23,7 +23,7 @@
                 <button type="button" class="btn btn-primary" style="margin: 20px;">Buy</button>
 
                 
-                <button type="button" class="btn btn-success" (click)="toggle()" style="margin-left: 20px;">More</button>
+                <button type="button" class="btn btn-success" (click)="toggle()" style="margin-left: 20px;"> More</button>
                 <div *ngIf="condition; then thenBlock"></div>
                     <ng-template #more>
 
@@ -39,11 +39,10 @@
                 
                 </ng-template>
                 
-             
                
             </dl>
-<button type="button"  (click)="previous()" style="background-color:white; border: none; margin-left: 40%; margin-right: 25px;"><mat-icon>arrow_back_ios</mat-icon></button>
-<button type="button"  (click)="next()" style="background-color:white; border: none; margin-right: 35%;"><mat-icon>arrow_forward_ios</mat-icon></button>
+<!-- <button type="button"  (click)="previous()" style="background-color:aqua; border: none; margin-left: 40%; margin-right: 25px;"><mat-icon>arrow_back_ios</mat-icon></button>
+<button type="button"  (click)="next()" style="background-color:aqua; border: none; margin-right: 35%;"><mat-icon>arrow_forward_ios</mat-icon></button> -->
 
     
     
