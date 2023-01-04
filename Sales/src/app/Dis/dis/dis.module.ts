@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialExampleModule } from 'src/Material.Module';
 import { ProductComponent } from './product/product.component';
+import { ProduuctComponent } from './produuct/produuct.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ProductComponent } from './product/product.component';
    
     StockComponent,
          HomeComponent,
-         ProductComponent
+         ProductComponent,
+         ProduuctComponent
   ],
   imports: [
     CommonModule,

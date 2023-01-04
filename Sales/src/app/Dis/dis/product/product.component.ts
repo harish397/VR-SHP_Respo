@@ -1,4 +1,5 @@
 import { Component, OnInit,TemplateRef,ViewChild } from '@angular/core';
+import { RegService } from 'src/app/reg.service';
 
 @Component({
   selector: 'app-product',
@@ -7,38 +8,36 @@ import { Component, OnInit,TemplateRef,ViewChild } from '@angular/core';
 })
 export class ProductComponent implements OnInit {
 CD=new Date();
-  constructor() { }
-  product:any=null;
-  count=1
-  condition=true
-  buttontext:any=null
-  thenBlock:TemplateRef<any>|null=null;
-  @ViewChild('some',{static:true}) firstBlock:TemplateRef<any>|null=null;
-  @ViewChild('more',{static:true}) secondBlock:TemplateRef<any>|null=null;
-  getData(id:number){
-    fetch(`https://fakestoreapi.com/products/${id}`)
-    .then(response=>response.json())
-    .then(data=>{
-      this.product=data
-    })
+item:any;
+imageID=1;
+
+  constructor(private ser:RegService) { }
+ 
+
+  ngOnInit(){
+    this.sk(this.imageID);
+
+
+
   }
-
-  ngOnInit(): void {
-    this.getData(this.count)
-    this.thenBlock=this.firstBlock
-
+  sk(imageID:any)
+  {
+    var shiva=this.ser.getImgbyId(this.imageID).subscribe((x)=>{this.item=x; })
+    console.log(shiva);
+    return shiva;
   }
   previous(){
-    this.count--
-    this.getData(this.count)
+   
+
+    this.imageID--
+    this.sk(this.imageID);
+  
   }
   next(){
-    this.count++
-    this.getData(this.count)
-  }
-  toggle(){
-    this.thenBlock=(this.thenBlock==this.firstBlock)?this.secondBlock:this.firstBlock
+    this.imageID++
+    this.sk(this.imageID);
    
   }
+  
 
 }

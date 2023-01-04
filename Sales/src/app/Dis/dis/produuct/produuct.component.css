@@ -1,0 +1,13 @@
+.table th
+{
+    text-align: center;
+}
+.table-responsive
+{
+    margin: 3%;
+    border: 1px solid black;
+}
+ th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}

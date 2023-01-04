@@ -5,32 +5,24 @@
 
         
             <dl>
-                <dt>TITLE</dt>
-                <dd>{{product.title}}</dd>
+                <dt>ID</dt>
+                <dd>{{item.imageID}}</dd>
               
                 <dt>Category</dt>
-                <dd>{{product.category}}</dd>
-            
-                <button type="button" class="btn btn-primary" (click)="toggle()" style="margin-left: 20px;">description</button>
-                <div *ngIf="condition; then thenBlock"></div>
-                <ng-template #some>
-                    <img [src]="product.image" width="200" height="200">
-                </ng-template>
-                <ng-template #more>
-                    <h5>{{product.description}}</h5>
-            
-                </ng-template>
-                <dt>rating</dt>
-                <dd>{{product.rating.rate}}</dd>
-                <dd>No. of products sold : {{product.rating.count}}</dd>
+                <dd>{{item.productFamily}}</dd>
+                
+                <dt>Preview</dt>
+                <dd><img src="data:image/png;base64,{{item.productImage1}}" style="height: 200px; width: 250px; margin-left: 30%;"></dd>
+
+
+                <dt>Description</dt>
+                <dd>{{item.Descriptions}}</dd>
+             
+               
             </dl>
-           
-    
-        <div class="B">
-            <button type="button" class="btn btn-primary" (click)="previous()" style="margin:0 83% 0 8px;">previous</button> 
-            <button type="button" class="btn btn-primary" (click)="next()">next</button>
-        </div>
-        
+<button type="button"  (click)="previous()" style="background-color:white; border: none; margin-left: 40%; margin-right: 25px;"><mat-icon>arrow_back_ios</mat-icon></button>
+<button type="button"  (click)="next()" style="background-color:white; border: none; margin-right: 35%;"><mat-icon>arrow_forward_ios</mat-icon></button>
+
     
     
     
