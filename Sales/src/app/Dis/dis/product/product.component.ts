@@ -10,15 +10,22 @@ export class ProductComponent implements OnInit {
 CD=new Date();
 item:any;
 imageID=1;
+condition=true
+thenBlock:TemplateRef<any>|null=null;
 
   constructor(private ser:RegService) { }
  
-
+@ViewChild('more',{static:true}) firstBlock:TemplateRef<any>|null=null;
+@ViewChild('some',{static:true}) secondBlock:TemplateRef<any>|null=null;
   ngOnInit(){
     this.sk(this.imageID);
 
 
 
+  }
+  toggle()
+  {
+    this.thenBlock=(this.thenBlock==this.firstBlock)?this.secondBlock:this.firstBlock
   }
   sk(imageID:any)
   {

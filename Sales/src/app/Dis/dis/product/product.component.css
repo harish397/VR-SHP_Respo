@@ -6,3 +6,7 @@ h2{
     margin: 10px 20% 20px 15%;
     border:1px solid black;
 }
+dl
+{
+    margin:20px 0 10px 20px;
+}

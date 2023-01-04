@@ -16,10 +16,29 @@
 
 
                 <dt>Description</dt>
-                <dd>{{item.Descriptions}}</dd>
+                <dd>{{item.Descriptions}}</dd><br>
 
                 <dt>Price</dt>
-                <dd>{{item.Price | currency:'INR' }}</dd>
+                <dd>{{item.Price |  currency:'INR'}}</dd>
+                <button type="button" class="btn btn-primary" style="margin: 20px;">Buy</button>
+
+                
+                <button type="button" class="btn btn-success" (click)="toggle()" style="margin-left: 20px;">More</button>
+                <div *ngIf="condition; then thenBlock"></div>
+                    <ng-template #more>
+
+                    <dt>Return </dt>
+                    <dd>{{item.productret}}</dd><br>
+
+                    <dt>Warranty</dt>
+                    <dd>{{item.Warranty}}</dd> <br>
+
+
+                    <dt>Seller-Info</dt>
+                    <dd>{{item.Seller}}</dd><br>
+                
+                </ng-template>
+                
              
                
             </dl>
