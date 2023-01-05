@@ -1,8 +1,13 @@
-.table th,td
+/* .table th,td
 {
     text-align: center;
 }
-.table-responsive
+.Search
+{
+    margin: 3%;
+
+}
+.table-responsive 
 {
     margin: 3%;
     border: 1px solid black;
@@ -10,4 +15,8 @@
  th, td{
     border: 1px solid black;
     border-collapse: collapse;
+} */
+.mat-elvation-z8, .Search
+{
+    margin: 2% 2% 0 3%;
 }

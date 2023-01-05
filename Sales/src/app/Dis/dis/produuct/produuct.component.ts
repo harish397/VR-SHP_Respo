@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
 import { RegService } from 'src/app/reg.service';
 import { ProductComponent } from '../product/product.component';
@@ -11,12 +13,25 @@ import { ProductComponent } from '../product/product.component';
 })
 export class ProduuctComponent implements OnInit {
 data:any;
-id=1;
+
+loginform:any;
+
+
   constructor(private ser:RegService,private dia:MatDialog) { }
+  @ViewChild(MatSort) Sort:MatSort|any;
+  
+  columns:string[]=['imageID','productFamily','product','productImage1','Action']
+  dataSource=new MatTableDataSource;
 
   ngOnInit(): void {
-    this.ser.getImg().subscribe((x:any)=>{this.data=x})
+    this.ser.getImg().subscribe((x:any)=>{this.loginform= new MatTableDataSource(x);
+      this.loginform.sort=this.Sort
+    })
 
+  }
+  filter(e:any)
+  {
+    return this.loginform.filter=e.target.value;
   }
   view(imageID:any)
   {
