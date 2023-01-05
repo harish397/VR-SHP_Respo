@@ -41,4 +41,8 @@ getByID(ID:any)
   {
     return this.http.get(`https://localhost:44349/api/Sales/getimgID/${id}`,this.httpOption);
   }
+  Sales(id:any)
+  {
+    return this.http.get(`https://localhost:44349/api/Sales/getSales/${id}`,this.httpOption);
+  }
 }

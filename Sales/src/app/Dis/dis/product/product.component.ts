@@ -1,5 +1,6 @@
 import { Component, OnInit,TemplateRef,ViewChild,Inject } from '@angular/core';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { RegService } from 'src/app/reg.service';
 
 @Component({
@@ -15,7 +16,7 @@ condition=true;
 
 thenBlock:TemplateRef<any>|null=null;
 
-  constructor(private ser:RegService,@Inject(MAT_DIALOG_DATA) public data:any) { 
+  constructor(private ser:RegService,@Inject(MAT_DIALOG_DATA) public data:any,private dia:MatDialog,private route:Router) { 
    
   }
  
@@ -52,6 +53,11 @@ thenBlock:TemplateRef<any>|null=null;
     this.data.imageID++
     this.sk(this.data.imageID);
    
+  }
+  Authorize()
+  {
+    this.route.navigate(['/Distributor/purchase']);
+    this.dia.closeAll();
   }
   
 
