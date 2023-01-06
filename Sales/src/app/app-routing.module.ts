@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { PurchaseOrderComponent } from './Dis/dis/purchase-order/purchase-order.component';
 import { MasterComponent } from './master/master.component';
 
 const routes: Routes = [
@@ -28,6 +29,9 @@ path:"WareHouse",loadChildren:()=>import('./WareHouse/ware-house/ware-house.modu
   // {
   //   path:"home",component:HomeComponent
   // }
+  {
+    path:"purchase/:b",component:PurchaseOrderComponent
+  }
 
 
 ];

@@ -20,9 +20,9 @@
 
                 <dt>Price</dt>
                 <dd>{{item.Price |  currency:'INR'}}</dd>
-                <button type="button" class="btn btn-primary" style="margin: 20px;" (click)="Authorize()">Buy</button>
+                <button type="button" class="btn btn-primary" style="margin: 20px;" (click)="Authorize(item.imageID)">Buy</button>
 
-                
+                <a [routerLink]="['/purchase',item.imageID]">{{item.imageID}}</a>
                 <button type="button" class="btn btn-success" (click)="toggle()" style="margin-left: 20px;"> More</button>
                 <div *ngIf="condition; then thenBlock"></div>
                     <ng-template #more>

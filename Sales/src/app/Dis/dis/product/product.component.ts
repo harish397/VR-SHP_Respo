@@ -12,7 +12,7 @@ export class ProductComponent implements OnInit {
 CD=new Date();
 item:any;
 condition=true;
-
+b=this.data.imageID;
 
 thenBlock:TemplateRef<any>|null=null;
 
@@ -23,7 +23,7 @@ thenBlock:TemplateRef<any>|null=null;
 @ViewChild('more',{static:true}) firstBlock:TemplateRef<any>|null=null;
 @ViewChild('some',{static:true}) secondBlock:TemplateRef<any>|null=null;
   ngOnInit(){
-    this.sk(this.data.imageID);
+    this.sk(this.b);
 
 
 
@@ -38,25 +38,14 @@ thenBlock:TemplateRef<any>|null=null;
   }
   sk(imageID:any)
   {
-    var shiva=this.ser.getImgbyId(this.data.imageID).subscribe((x)=>{this.item=x; })
+    var shiva=this.ser.getImgbyId(this.b).subscribe((x)=>{this.item=x; })
     console.log(shiva);
     return shiva;
   }
-  previous(){
-   
 
-    this.data.imageID--
-    this.sk(this.data.imageID);
-  
-  }
-  next(){
-    this.data.imageID++
-    this.sk(this.data.imageID);
-   
-  }
-  Authorize()
+  Authorize(a:any)
   {
-    this.route.navigate(['/Distributor/purchase']);
+    this.route.navigate(['purchase',{term:a}] );
     this.dia.closeAll();
   }
   

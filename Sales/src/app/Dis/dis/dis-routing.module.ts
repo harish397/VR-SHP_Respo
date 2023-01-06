@@ -20,9 +20,7 @@ const routes: Routes = [
   {
     path:"home",component:HomeComponent
   },
-  {
-    path:"purchase",component:PurchaseOrderComponent
-  },
+
   
    
     {
@@ -32,6 +30,7 @@ const routes: Routes = [
     {
       path:"get",component:ProductComponent
     }
+
   
   
 ];
