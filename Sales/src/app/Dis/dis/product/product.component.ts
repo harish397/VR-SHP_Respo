@@ -43,9 +43,13 @@ thenBlock:TemplateRef<any>|null=null;
     return shiva;
   }
 
-  Authorize(a:any)
+  Authorize(b:any)
   {
-    this.route.navigate(['purchase',{term:a}] );
+    this.route.navigate(['purchase',{term:b}] );
+  
+  }
+  close()
+  {
     this.dia.closeAll();
   }
   

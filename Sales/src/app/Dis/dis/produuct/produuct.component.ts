@@ -12,7 +12,7 @@ import { ProductComponent } from '../product/product.component';
   styleUrls: ['./produuct.component.css']
 })
 export class ProduuctComponent implements OnInit {
-data:any;
+
 
 loginform:any;
 
